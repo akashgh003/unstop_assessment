@@ -1,0 +1,16 @@
+<div>
+    <label for="seats">How many seats would you like to reserve?</label>
+    <!-- Add an id to the input, add a title or placeholder attribute for accessibility -->
+    <input type="number" [(ngModel)]="requestedSeats" id="seats" min="1" max="7" placeholder="Enter number of seats" title="Number of seats to reserve" />
+    <button (click)="reserveSeats()">Reserve</button>
+  </div>
+  
+  <!-- Display seat layout -->
+  <div>
+    <div *ngFor="let row of coach">
+      <span *ngFor="let seat of row" [ngClass]="{ 'available': seat.available, 'reserved': !seat.available }">
+        {{ seat.number }}
+      </span>
+    </div>
+  </div>
+  

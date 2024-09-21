@@ -1,0 +1,10 @@
+.available {
+    color: green;
+    padding: 5px;
+  }
+  
+  .reserved {
+    color: red;
+    padding: 5px;
+  }
+  
